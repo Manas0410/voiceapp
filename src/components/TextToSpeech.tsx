@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -202,7 +204,7 @@ const TextToSpeech = () => {
               value={selectedLanguage}
               onValueChange={setSelectedLanguage}
             >
-              <SelectTrigger>
+              <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select a language" />
               </SelectTrigger>
               <SelectContent>
@@ -220,7 +222,7 @@ const TextToSpeech = () => {
               Select Voice:
             </label>
             <Select value={selectedVoice} onValueChange={setSelectedVoice}>
-              <SelectTrigger>
+              <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select a voice" />
               </SelectTrigger>
               <SelectContent>
